@@ -1,0 +1,209 @@
+/* Avenir Next Cyrillic */
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-Thin.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-ThinItalic.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-UltraLight.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-UltraLightIt.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-LightItalic.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-Italic.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-MediumItalic.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-Demi.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-DemiItalic.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-BoldItalic.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-Heavy.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyrillic";
+  src: url("/fonts/avenir-next-cyrillic/AvenirNextCyrillic-HeavyItalic.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bembo */
+@font-face {
+  font-family: "Bembo";
+  src: url("/fonts/bembo/BemboStd.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bembo";
+  src: url("/fonts/bembo/BemboStd-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bembo";
+  src: url("/fonts/bembo/BemboStd-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bembo";
+  src: url("/fonts/bembo/BemboStd-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bembo";
+  src: url("/fonts/bembo/BemboStd-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bembo";
+  src: url("/fonts/bembo/BemboStd-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bembo";
+  src: url("/fonts/bembo/BemboStd-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bembo";
+  src: url("/fonts/bembo/BemboStd-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}

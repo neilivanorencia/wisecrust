@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "@/src/styles/fonts.css";
+
+@layer base {
+  :root {
+    --font-sans: "Avenir Next Cyrillic", system-ui, sans-serif;
+    --font-serif: "Bembo", Georgia, serif;
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+}
