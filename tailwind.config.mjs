@@ -4,7 +4,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Avenir Next Cyrillic", "system-ui", "sans-serif"],
-        serif: ["Bembo", "Georgia", "serif"],
+        serif: ["IM Fell DW Pica", "Georgia", "serif"],
       },
     },
   },

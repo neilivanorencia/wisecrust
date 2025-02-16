@@ -4,7 +4,7 @@
 @layer base {
   :root {
     --font-sans: "Avenir Next Cyrillic", system-ui, sans-serif;
-    --font-serif: "Bembo", Georgia, serif;
+    --font-serif: "IM Fell DW Pica", serif;
   }
 
   html {
