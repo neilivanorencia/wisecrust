@@ -1,3 +1,4 @@
+import { Circle } from "@/src/components/circle";
 import { Hexagon } from "@/src/components/hexagon";
 
 export const HeroSection = () => {
@@ -30,6 +31,35 @@ export const HeroSection = () => {
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Hexagon className="hidden size-[1800px] md:block" />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Circle className="absolute top-[-825px] left-[275px] hidden md:inline-flex">
+                <img
+                  src="/src/assets/abacus.png"
+                  alt="Abacus"
+                  className="size-[150px]"
+                />
+              </Circle>
+            </div>
+
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Circle className="absolute -top-[80px] -left-[605px] hidden md:inline-flex">
+                <img
+                  src="/src/assets/art.png"
+                  alt="Art"
+                  className="size-[150px]"
+                />
+              </Circle>
+            </div>
+
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Circle className="absolute top-[270px] left-[190px] hidden md:inline-flex">
+                <img
+                  src="/src/assets/clock.png"
+                  alt="Clock"
+                  className="size-[150px]"
+                />
+              </Circle>
             </div>
           </div>
         </div>
