@@ -13,6 +13,13 @@ export const HeroSection = () => {
         <p className="mx-auto mt-6 max-w-xl text-center font-serif text-2xl text-slate-700 md:text-3xl">
           Establishing insightful reflection through profound concepts
         </p>
+
+        <div className="mt-10 flex justify-center">
+          <button className="relative cursor-pointer px-4 py-2 font-semibold tracking-wide uppercase">
+            <div className="absolute inset-0 outline-2 -outline-offset-2 outline-green-700"></div>
+            <span className="leading-6 text-green-700">Explore Now</span>
+          </button>
+        </div>
       </div>
     </section>
   );
