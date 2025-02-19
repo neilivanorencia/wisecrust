@@ -1,3 +1,5 @@
+import { Hexagon } from "@/src/components/hexagon";
+
 export const HeroSection = () => {
   return (
     <section className="overflow-x-clip py-36 md:py-52">
@@ -19,6 +21,17 @@ export const HeroSection = () => {
             <div className="absolute inset-0 outline-2 -outline-offset-2 outline-green-700"></div>
             <span className="leading-6 text-green-700">Explore Now</span>
           </button>
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <div className="relative z-0 inline-flex h-[250px] w-full max-w-xl md:h-[500px]">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Hexagon className="hidden size-[1100px] md:block" />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Hexagon className="hidden size-[1800px] md:block" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
