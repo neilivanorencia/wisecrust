@@ -61,6 +61,12 @@ export const HeroSection = () => {
                 />
               </Circle>
             </div>
+
+            <img
+              src="/src/assets/reading.png"
+              alt="Book"
+              className="absolute top-1/2 left-1/2 h-auto w-auto max-w-[80%] -translate-x-1/2 -translate-y-1/2 object-contain"
+            />
           </div>
         </div>
       </div>
