@@ -1,10 +1,14 @@
 export const HeaderSection = () => {
   return (
-    <header className="sticky top-0 z-50 bg-white/10 backdrop-blur-2xl">
+    <header className="fixed top-0 right-0 left-0 z-50 bg-green-100/10 backdrop-blur-2xl">
       <div className="container mx-auto px-4">
         <div className="flex h-24 items-center justify-between md:h-28">
           <div className="flex items-center gap-2">
-            <img src="/favicon.svg" alt="Wisecrust Logo" className="size-20" />
+            <img
+              src="/favicon.svg"
+              alt="Wisecrust Logo"
+              className="size-16 md:size-20"
+            />
 
             <p className="font-sans text-2xl font-semibold tracking-wide text-green-600 uppercase md:text-3xl">
               Wisecrust
