@@ -16,10 +16,11 @@ export const HeaderSection = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="relative hidden cursor-pointer px-4 py-2 font-semibold tracking-wide uppercase md:inline-flex">
-              <div className="absolute inset-0 outline-2 -outline-offset-2 outline-orange-400"></div>
-
-              <span className="leading-6 text-orange-400">Explore Now</span>
+            <button className="relative hidden cursor-pointer px-4 py-2 font-semibold tracking-wide text-orange-400 uppercase md:inline-flex group overflow-hidden transition-all duration-300">
+              <div className="absolute inset-0 outline-2 outline-orange-400 -outline-offset-2 group-hover:bg-orange-400/10 transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-orange-400 transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 -z-10"></div>
+              
+              <span className="leading-6 relative z-10 group-hover:text-white transition-colors duration-300">Explore Now</span>
             </button>
 
             <div className="relative size-10 cursor-pointer">
