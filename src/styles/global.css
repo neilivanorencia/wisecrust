@@ -12,6 +12,6 @@
   }
 
   body {
-    @apply bg-green-100 antialiased;
+    @apply bg-green-200 antialiased;
   }
 }

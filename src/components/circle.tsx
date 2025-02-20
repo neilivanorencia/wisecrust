@@ -7,7 +7,7 @@ export const Circle = (props: ComponentPropsWithoutRef<"div">) => {
   return (
     <div
       className={twMerge(
-        "inline-flex size-[250px] items-center justify-center rounded-full bg-green-100 outline-6 -outline-offset-6 outline-green-500/10",
+        "inline-flex size-[250px] items-center justify-center rounded-full bg-green-200 outline-6 -outline-offset-6 outline-green-500/20",
         className,
       )}
     >
