@@ -56,7 +56,7 @@ export const FeatureCards = () => {
               >
                 <div
                   className={twMerge(
-                    "absolute top-1.5 right-1.5 -z-10 size-16 rounded-xl",
+                    "absolute top-1.5 right-1.5 -z-10 size-16 rounded-xl opacity-0 blur-md transition duration-300 group-hover:opacity-100",
                     color === "emerald" && "bg-emerald-500",
                     color === "blue" && "bg-blue-500",
                     color === "teal" && "bg-teal-500",
@@ -65,11 +65,28 @@ export const FeatureCards = () => {
                   )}
                 />
 
+                <div
+                  className={twMerge(
+                    "absolute top-1.5 right-1.5 -z-10 size-16 rounded-xl transition duration-300",
+                    color === "emerald" &&
+                      "bg-emerald-500 group-hover:bg-emerald-400",
+                    color === "blue" && "bg-blue-500 group-hover:bg-blue-400",
+                    color === "teal" && "bg-teal-500 group-hover:bg-teal-400",
+                    color === "sky" && "bg-sky-500 group-hover:bg-sky-400",
+                    color === "cyan" && "bg-cyan-500 group-hover:bg-cyan-400",
+                  )}
+                />
+
                 <div className="absolute inset-0 -z-10 rounded-2xl bg-green-300 [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]" />
 
                 <div className="-mt-28 flex justify-center">
                   <div className="relative inline-flex">
-                    <img src={image} alt={title} className="size-50" />
+                    <div className="absolute top-[calc(100%+16px)] h-4 w-full rounded-[100%] bg-green-500/70 transition duration-300 [mask-image:radial-gradient(closest-side,black,transparent)] group-hover:bg-green-500/30" />
+                    <img
+                      src={image}
+                      alt={title}
+                      className="size-50 transition duration-300 group-hover:-translate-y-6"
+                    />
                   </div>
                 </div>
 
@@ -94,7 +111,8 @@ export const FeatureCards = () => {
                   >
                     Learn More
                   </button>
-                  <HiOutlineArrowNarrowRight className="size-8 text-slate-800" />
+
+                  <HiOutlineArrowNarrowRight className="size-8 -translate-x-2 text-slate-800 transition duration-300 group-hover:translate-x-0 group-hover:text-slate-600" />
                 </div>
               </div>
             ))}
