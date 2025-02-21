@@ -43,6 +43,25 @@ export const FeatureCards = () => {
         <h2 className="mx-auto max-w-4xl text-center font-sans text-4xl font-extrabold text-slate-800 md:text-5xl">
           Explore the Frontiers of Thought with Wisecrust
         </h2>
+
+        <div className="mt-32 flex px-4 max-md:justify-center">
+          <div className="flex flex-none gap-8 max-md:[&>*]:hidden max-md:[&>*:first-child]:block">
+            {cardData.map(({ image, title, description }) => (
+              <div key={title} className="max-w-xs p-8 md:max-w-md md:p-10">
+                <img src={image} alt={title} className="size-50" />
+                <h3 className="mt-12 font-sans text-3xl font-bold tracking-wide text-slate-800 uppercase">
+                  {title}
+                </h3>
+                <p className="mt-4 font-serif text-2xl text-slate-800">
+                  {description}
+                </p>
+                <button className="mt-12 font-sans text-sm font-bold tracking-wide uppercase">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
