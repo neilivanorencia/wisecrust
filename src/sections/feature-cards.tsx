@@ -118,6 +118,20 @@ export const FeatureCards = () => {
             ))}
           </div>
         </div>
+
+        <div className="mt-10 flex justify-center">
+          <div className="inline-flex gap-4">
+            {cardData.map(({ title }, index) => (
+              <div
+                key={title}
+                className={twMerge(
+                  "size-2.5 cursor-pointer rounded-full bg-green-400 transition-all duration-300 hover:scale-125 hover:opacity-80",
+                  index === 0 && "scale-125 opacity-100",
+                )}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
