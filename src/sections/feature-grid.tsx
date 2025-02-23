@@ -48,6 +48,14 @@ export const FeatureGrid = () => {
                 </button>
               </div>
             </div>
+
+            <div className="hidden items-center justify-center md:flex">
+              <img
+                src="/src/assets/globe.png"
+                alt="Globe"
+                className="size-100 max-w-none"
+              />
+            </div>
           </div>
         </div>
       </div>
