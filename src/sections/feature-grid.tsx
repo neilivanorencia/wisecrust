@@ -59,6 +59,16 @@ export const FeatureGrid = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="relative hidden items-center justify-center md:flex">
+              <div className="absolute right-0">
+                <img
+                  src="/src/assets/books.png"
+                  alt="Books"
+                  className="size-100 max-w-none"
+                />
+              </div>
+            </div>
+
             <div className="col-span-2">
               <h2 className="text-center font-sans text-4xl font-extrabold text-slate-800 md:text-left md:text-5xl">
                 Illuminate the Realm of Ideas
