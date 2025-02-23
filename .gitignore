@@ -20,6 +20,9 @@ pnpm-debug.log*
 # fonts
 public/fonts/*
 
+# articles
+src/content/articles/*
+
 # macOS-specific files
 .DS_Store
 
