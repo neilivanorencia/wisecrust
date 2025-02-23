@@ -43,20 +43,20 @@ export const FeatureCards = () => {
   return (
     <section className="-mt-24 overflow-x-clip py-4 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="mx-auto max-w-4xl text-center font-sans text-4xl font-extrabold text-slate-800 md:text-5xl">
+        <h2 className="mx-auto max-w-4xl text-center font-sans text-4xl font-extrabold text-slate-800 sm:text-5xl">
           Explore the Frontiers of Thought with Wisecrust
         </h2>
 
-        <div className="mt-32 flex px-4 max-md:justify-center">
-          <div className="flex flex-none gap-8 max-md:[&>*]:hidden max-md:[&>*:first-child]:block">
+        <div className="mt-32 flex px-4 max-sm:justify-center">
+          <div className="flex flex-none gap-8 max-sm:[&>*]:hidden max-sm:[&>*:first-child]:block">
             {cardData.map(({ image, title, description, color }) => (
               <div
                 key={title}
-                className="group relative z-0 max-w-xs p-8 md:max-w-md md:p-10"
+                className="group relative z-0 max-w-xs p-8 sm:max-w-sm sm:p-10"
               >
                 <div
                   className={twMerge(
-                    "absolute top-1.5 right-1.5 -z-10 size-16 rounded-xl opacity-0 blur-md transition duration-300 group-hover:opacity-100",
+                    "absolute top-1.5 right-1.5 -z-10 size-16 rounded-xl opacity-0 blur-sm transition duration-300 group-hover:opacity-100",
                     color === "emerald" && "bg-emerald-500",
                     color === "blue" && "bg-blue-500",
                     color === "teal" && "bg-teal-500",
