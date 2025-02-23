@@ -57,6 +57,42 @@ export const FeatureGrid = () => {
               />
             </div>
           </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="col-span-2">
+              <h2 className="text-center font-sans text-4xl font-extrabold text-slate-800 md:text-left md:text-5xl">
+                Illuminate the Realm of Ideas
+              </h2>
+
+              <div className="mt-6 flex flex-col gap-6 text-center font-serif text-xl text-slate-800 md:text-left md:text-2xl">
+                <p>
+                  Wisecrust is committed to encouraging a richer understanding
+                  of philosophical ideas through offering clear and thoughtful
+                  explorations of fundamental concepts.
+                </p>
+                <p>
+                  The goal is to equip readers with frameworks to analyze
+                  existential dilemmas, ethical challenges, and the evolving
+                  human condition, encouraging reasoned dialogue over passive
+                  acceptance.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-8">
+                <button className="group relative inline-flex w-full cursor-pointer justify-center overflow-hidden px-4 py-2 font-semibold tracking-wide text-green-600 uppercase transition-all duration-300 sm:w-auto">
+                  <div className="absolute inset-0 outline-2 -outline-offset-2 outline-green-600 transition-all duration-300 group-hover:bg-green-600/10"></div>
+                  <div className="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-green-600 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
+                  <span className="relative z-10 text-center leading-6 transition-colors duration-300 group-hover:text-white">
+                    Explore Concepts
+                  </span>
+                </button>
+                <button className="group relative flex h-[38px] cursor-pointer items-center font-sans font-semibold tracking-wide text-green-600 uppercase transition-all duration-300 hover:text-green-500">
+                  Discover More
+                  <span className="absolute -bottom-0 left-0 h-[2px] w-0 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
