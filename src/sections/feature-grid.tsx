@@ -7,7 +7,50 @@ const listItems = [
 export const FeatureGrid = () => {
   return (
     <section className="overflow-x-clip py-8">
-      <div className="container mx-auto px-4"></div>
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col gap-16 md:gap-36">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="col-span-2">
+              <h2 className="text-center font-sans text-4xl font-extrabold text-slate-800 md:text-left md:text-5xl">
+                Cultivate Philosophical Insights
+              </h2>
+
+              <p className="mt-8 text-center font-serif text-2xl text-slate-800 md:text-left md:text-3xl">
+                Wisecrust offers a platform for the exploration of profound
+                philosophical concepts and their relevance to understanding
+                existence.
+              </p>
+
+              <ul className="mt-8 flex flex-col gap-4">
+                {listItems.map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <div className="inline-flex size-8 flex-shrink-0 items-center justify-center rounded-full outline-2 -outline-offset-2 outline-green-500/20">
+                      <div className="size-1.5 rounded-full bg-green-500"></div>
+                    </div>
+                    <span className="font-serif text-xl text-slate-800 md:text-2xl">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-8">
+                <button className="group relative inline-flex w-full cursor-pointer justify-center overflow-hidden px-4 py-2 font-semibold tracking-wide text-orange-500 uppercase transition-all duration-300 sm:w-auto">
+                  <div className="absolute inset-0 outline-2 -outline-offset-2 outline-orange-500 transition-all duration-300 group-hover:bg-orange-500/10"></div>
+                  <div className="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-orange-500 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
+                  <span className="relative z-10 text-center leading-6 transition-colors duration-300 group-hover:text-white">
+                    Explore Concepts
+                  </span>
+                </button>
+                <button className="group relative flex h-[38px] cursor-pointer items-center font-sans font-semibold tracking-wide text-orange-500 uppercase transition-all duration-300 hover:text-orange-600">
+                  Discover More
+                  <span className="absolute -bottom-0 left-0 h-[2px] w-0 bg-orange-600 transition-all duration-300 group-hover:w-full"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
