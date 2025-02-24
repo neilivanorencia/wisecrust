@@ -5,6 +5,7 @@ import { HeroSection } from "@/src/sections/hero";
 import { FeatureCards } from "@/src/sections/feature-cards";
 import { FeatureGrid } from "@/src/sections/feature-grid";
 import { RecentPosts } from "@/src/sections/recent-posts";
+import { ReflectionsSection } from "@/src/sections/reflections";
 
 import { getCollection } from "astro:content";
 
@@ -30,4 +31,5 @@ const recentPosts = posts
   <FeatureCards />
   <FeatureGrid />
   <RecentPosts recentPosts={recentPosts} />
+  <ReflectionsSection />
 </Layout>
