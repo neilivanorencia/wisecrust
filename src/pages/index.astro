@@ -6,6 +6,7 @@ import { FeatureCards } from "@/src/sections/feature-cards";
 import { FeatureGrid } from "@/src/sections/feature-grid";
 import { RecentPosts } from "@/src/sections/recent-posts";
 import { ReflectionsSection } from "@/src/sections/reflections";
+import { CallToAction } from "@/src/sections/call-to-action";
 
 import { getCollection } from "astro:content";
 
@@ -32,4 +33,5 @@ const recentPosts = posts
   <FeatureGrid />
   <RecentPosts recentPosts={recentPosts} />
   <ReflectionsSection />
+  <CallToAction />
 </Layout>

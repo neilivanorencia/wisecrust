@@ -33,7 +33,7 @@ export const ReflectionsSection = () => {
                 reflectionsIndex === 2 && "md:hidden lg:block",
               )}
             >
-              <p className="font-sans text-2xl font-black text-slate-800 md:text-3xl">
+              <p className="font-sans text-2xl font-bold text-slate-800 md:text-3xl">
                 {reflections.text}
               </p>
               <cite className="mt-8 block">
