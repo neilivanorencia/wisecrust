@@ -39,7 +39,7 @@ export const HeroSection = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute top-[-825px] left-[275px] hidden md:inline-flex">
                 <img
-                  src="/src/assets/abacus.png"
+                  src="/src/assets/illustrations/abacus.png"
                   alt="Abacus"
                   className="size-[150px]"
                 />
@@ -49,7 +49,7 @@ export const HeroSection = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute -top-[80px] -left-[605px] hidden md:inline-flex">
                 <img
-                  src="/src/assets/art.png"
+                  src="/src/assets/illustrations/art.png"
                   alt="Art"
                   className="size-[150px]"
                 />
@@ -59,7 +59,7 @@ export const HeroSection = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute top-[270px] left-[190px] hidden md:inline-flex">
                 <img
-                  src="/src/assets/clock.png"
+                  src="/src/assets/illustrations/clock.png"
                   alt="Clock"
                   className="size-[150px]"
                 />
@@ -67,7 +67,7 @@ export const HeroSection = () => {
             </div>
 
             <img
-              src="/src/assets/reading.png"
+              src="/src/assets/illustrations/reading.png"
               alt="Book"
               className="absolute top-1/2 left-1/2 h-auto w-auto max-w-[80%] -translate-x-1/2 -translate-y-1/2 object-contain"
             />

@@ -3,35 +3,35 @@ import { twMerge } from "tailwind-merge";
 
 const cardData = [
   {
-    image: "/src/assets/desk-lamp.png",
+    image: "/src/assets/illustrations/desk-lamp.png",
     title: "Existentialism",
     description:
       "Existentialism posits that existence precedes essence, meaning individuals are born into the world without pre-defined purpose or nature.",
     color: "emerald",
   },
   {
-    image: "/src/assets/whiteboard.png",
+    image: "/src/assets/illustrations/whiteboard.png",
     title: "Nihilism",
     description:
       "Nihilism is a philosophical concept that fundamentally questions the existence of objective meaning, value, and truth. ",
     color: "blue",
   },
   {
-    image: "/src/assets/stationery.png",
+    image: "/src/assets/illustrations/stationery.png",
     title: "Idealism",
     description:
       "Idealism asserts that the nature of this world is fundamentally shaped by, or reducible to, mind, spirit, or consciousness.",
     color: "teal",
   },
   {
-    image: "/src/assets/diploma.png",
+    image: "/src/assets/illustrations/diploma.png",
     title: "Solipsism",
     description:
       "Solipsism is a philosophical proposition that posits the potential singularity of consciousness.",
     color: "sky",
   },
   {
-    image: "/src/assets/locker.png",
+    image: "/src/assets/illustrations/locker.png",
     title: "Memento Mori",
     description:
       "Memento mori, Latin for 'remember you must die,' serves as a potent reminder of the finite nature of human existence.",

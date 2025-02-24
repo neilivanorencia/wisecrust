@@ -51,7 +51,7 @@ export const FeatureGrid = () => {
 
             <div className="hidden items-center justify-center md:flex">
               <img
-                src="/src/assets/globe.png"
+                src="/src/assets/illustrations/globe.png"
                 alt="Globe"
                 className="size-100 max-w-none"
               />
@@ -62,7 +62,7 @@ export const FeatureGrid = () => {
             <div className="relative hidden items-center justify-center md:flex">
               <div className="absolute right-0">
                 <img
-                  src="/src/assets/books.png"
+                  src="/src/assets/illustrations/books.png"
                   alt="Books"
                   className="size-100 max-w-none"
                 />
