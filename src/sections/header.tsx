@@ -1,6 +1,26 @@
+import { useState, useEffect } from "react";
+
 export const HeaderSection = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 bg-green-200">
+    <header
+      className={`fixed top-0 right-0 left-0 z-50 bg-green-200 transition-shadow duration-300 ${
+        scrolled ? "shadow-md" : ""
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex h-24 items-center justify-between md:h-28">
           <div className="flex items-center gap-2">
@@ -16,11 +36,12 @@ export const HeaderSection = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="relative hidden cursor-pointer px-4 py-2 font-semibold tracking-wide text-orange-400 uppercase md:inline-flex group overflow-hidden transition-all duration-300">
-              <div className="absolute inset-0 outline-2 outline-orange-400 -outline-offset-2 group-hover:bg-orange-400/10 transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-orange-400 transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 -z-10"></div>
-              
-              <span className="leading-6 relative z-10 group-hover:text-white transition-colors duration-300">Explore Now</span>
+            <button className="group relative hidden cursor-pointer overflow-hidden px-4 py-2 font-semibold tracking-wide text-orange-400 uppercase transition-all duration-300 md:inline-flex">
+              <div className="absolute inset-0 outline-2 -outline-offset-2 outline-orange-400 transition-all duration-300 group-hover:bg-orange-400/10"></div>
+              <div className="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-orange-400 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
+              <span className="relative z-10 leading-6 transition-colors duration-300 group-hover:text-white">
+                Explore Now
+              </span>
             </button>
 
             <div className="relative size-10 cursor-pointer">
