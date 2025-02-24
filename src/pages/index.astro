@@ -5,6 +5,21 @@ import { HeroSection } from "@/src/sections/hero";
 import { FeatureCards } from "@/src/sections/feature-cards";
 import { FeatureGrid } from "@/src/sections/feature-grid";
 import { RecentPosts } from "@/src/sections/recent-posts";
+
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("articles");
+const recentPosts = posts
+  .sort((a, b) => {
+    if (a.data.publishedDate.valueOf() === b.data.publishedDate.valueOf()) {
+      return 0;
+    } else {
+      return a.data.publishedDate.valueOf() > b.data.publishedDate.valueOf()
+        ? -1
+        : 1;
+    }
+  })
+  .slice(0, 6);
 ---
 
 <Layout>
@@ -14,5 +29,5 @@ import { RecentPosts } from "@/src/sections/recent-posts";
   </main>
   <FeatureCards />
   <FeatureGrid />
-  <RecentPosts />
+  <RecentPosts recentPosts={recentPosts} />
 </Layout>
