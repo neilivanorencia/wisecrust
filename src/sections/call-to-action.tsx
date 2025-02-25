@@ -1,30 +1,54 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 import { Circle } from "@/src/components/circle";
 import { Hexagon } from "@/src/components/hexagon";
 
 export const CallToAction = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const illustrationsRotate = useTransform(scrollYProgress, [0, 1], [45, -45]);
+
   return (
-    <section className="overflow-hidden py-60">
+    <section className="overflow-hidden py-60" ref={sectionRef}>
       <div className="container mx-auto px-8 md:px-4">
         <div className="relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Hexagon className="size-[700px]" />
+            <Hexagon size={700} />
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Hexagon className="size-[1100px]" />
+            <Hexagon duration={50} size={1100} reverse />
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:block hidden">
-            <Circle className="absolute -top-[400px] left-5 size-[200px]">
-              <img
+          <div className="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 sm:block">
+            <Circle
+              animate
+              className="absolute -top-[400px] left-5 size-[200px]"
+            >
+              <motion.img
                 src="src/assets/illustrations/abc.png"
                 className="size-[140px]"
+                style={{
+                  rotate: illustrationsRotate,
+                }}
               />
             </Circle>
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:block hidden">
-            <Circle className="absolute -top-[70px] -left-[600px] size-[200px]">
-              <img
+          <div className="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 sm:block">
+            <Circle
+              animate
+              className="absolute -top-[70px] -left-[600px] size-[200px]"
+            >
+              <motion.img
                 src="src/assets/illustrations/bag.png"
                 className="size-[140px]"
+                style={{
+                  rotate: illustrationsRotate,
+                }}
               />
             </Circle>
           </div>

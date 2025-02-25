@@ -51,14 +51,22 @@ export const HeroSection = () => {
         <div className="mt-8 flex justify-center">
           <div className="relative z-0 inline-flex h-[250px] w-full max-w-xl md:h-[500px]">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <Hexagon className="hidden size-[1100px] md:block" />
+              <Hexagon className="hidden md:block" size={1100} />
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <Hexagon className="hidden size-[1800px] md:block" />
+              <Hexagon
+                className="hidden md:block"
+                duration={50}
+                size={1800}
+                reverse
+              />
             </div>
 
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <Circle className="absolute top-[-825px] left-[275px] hidden md:inline-flex">
+              <Circle
+                animate
+                className="absolute top-[-825px] left-[275px] hidden md:inline-flex"
+              >
                 <motion.img
                   src="/src/assets/illustrations/abacus.png"
                   alt="Abacus"
@@ -86,7 +94,10 @@ export const HeroSection = () => {
             </div>
 
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <Circle className="absolute top-[270px] left-[190px] hidden md:inline-flex">
+              <Circle
+                animate
+                className="absolute top-[270px] left-[190px] hidden md:inline-flex"
+              >
                 <motion.img
                   src="/src/assets/illustrations/clock.png"
                   alt="Clock"
@@ -113,7 +124,19 @@ export const HeroSection = () => {
 
         <div className="mt-20 flex flex-col items-center justify-center gap-4 md:mt-80">
           <div className="inline-flex h-10 w-5 justify-center rounded-full pt-2 outline-4 outline-green-500/10">
-            <div className="h-3 w-1 rounded-full bg-green-400"></div>
+            <motion.div
+              animate={{
+                translateY: 12,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 2,
+                ease: "linear",
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="h-3 w-1 rounded-full bg-green-400"
+            />
           </div>
           <p className="text-center font-sans font-bold tracking-wide text-green-500/50 uppercase">
             Scroll for More Information
