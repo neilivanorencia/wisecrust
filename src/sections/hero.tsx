@@ -1,7 +1,16 @@
+import { motion } from "framer-motion";
+
 import { Circle } from "@/src/components/circle";
 import { Hexagon } from "@/src/components/hexagon";
 
 export const HeroSection = () => {
+  const floatingTransition = {
+    duration: 2,
+    repeat: Infinity,
+    repeatType: "reverse",
+    ease: "easeInOut",
+  } as const;
+
   return (
     <section className="overflow-x-clip py-36 md:py-52">
       <div className="container mx-auto px-4">
@@ -19,10 +28,12 @@ export const HeroSection = () => {
           </p>
 
           <div className="mt-10 flex justify-center">
-            <button className="relative cursor-pointer px-4 py-2 font-semibold tracking-wide uppercase group overflow-hidden transition-all duration-300">
-              <div className="absolute inset-0 outline-2 outline-green-700 -outline-offset-2 group-hover:bg-green-700/10 transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-green-700 transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 -z-10"></div>
-              <span className="leading-6 text-green-700 relative z-10 group-hover:text-white transition-colors duration-300">Explore Now</span>
+            <button className="group relative cursor-pointer overflow-hidden px-4 py-2 font-semibold tracking-wide uppercase transition-all duration-300">
+              <div className="absolute inset-0 outline-2 -outline-offset-2 outline-green-700 transition-all duration-300 group-hover:bg-green-700/10"></div>
+              <div className="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-green-700 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
+              <span className="relative z-10 leading-6 text-green-700 transition-colors duration-300 group-hover:text-white">
+                Explore Now
+              </span>
             </button>
           </div>
         </div>
@@ -66,10 +77,14 @@ export const HeroSection = () => {
               </Circle>
             </div>
 
-            <img
+            <motion.img
               src="/src/assets/illustrations/reading.png"
               alt="Book"
               className="absolute top-1/2 left-1/2 h-auto w-auto max-w-[80%] -translate-x-1/2 -translate-y-1/2 object-contain"
+              animate={{
+                y: [0, "-5%"],
+              }}
+              transition={floatingTransition}
             />
           </div>
         </div>
@@ -78,7 +93,7 @@ export const HeroSection = () => {
           <div className="inline-flex h-10 w-5 justify-center rounded-full pt-2 outline-4 outline-green-500/10">
             <div className="h-3 w-1 rounded-full bg-green-400"></div>
           </div>
-          <p className="font-sans font-bold tracking-wide text-center text-green-500/50 uppercase">
+          <p className="text-center font-sans font-bold tracking-wide text-green-500/50 uppercase">
             Scroll for More Information
           </p>
         </div>
