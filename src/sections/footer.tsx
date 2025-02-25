@@ -84,7 +84,7 @@ export const Footer = () => {
               <div key={name}>
                 <a
                   href={href}
-                  className="inline-flex items-center gap-3 font-serif text-lg font-bold text-slate-700 transition-colors hover:text-green-700 sm:text-xl"
+                  className="inline-flex items-center gap-3 font-sans text-base font-semibold text-slate-700 transition-colors hover:text-green-700 sm:text-xl"
                 >
                   <Icon className="size-6" />
                   <span>{name}</span>
@@ -101,7 +101,7 @@ export const Footer = () => {
               <div key={title}>
                 <a
                   href={href}
-                  className="inline-flex items-center gap-3 font-serif text-lg font-bold text-slate-700 transition-colors hover:text-green-700 sm:text-xl"
+                  className="inline-flex items-center gap-3 font-sans text-base font-semibold text-slate-700 transition-colors hover:text-green-700 sm:text-xl"
                 >
                   <Icon className="size-5" />
                   <span>{title}</span>

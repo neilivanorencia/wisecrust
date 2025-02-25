@@ -1,9 +1,19 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 import { Circle } from "@/src/components/circle";
 import { Hexagon } from "@/src/components/hexagon";
 
 export const HeroSection = () => {
+  const rotationRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: rotationRef,
+    offset: ["start end", "end start"],
+  });
+
+  const illustrationsRotate = useTransform(scrollYProgress, [0, 1], [0, -50]);
+
   const floatingTransition = {
     duration: 2,
     repeat: Infinity,
@@ -49,30 +59,42 @@ export const HeroSection = () => {
 
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute top-[-825px] left-[275px] hidden md:inline-flex">
-                <img
+                <motion.img
                   src="/src/assets/illustrations/abacus.png"
                   alt="Abacus"
                   className="size-[150px]"
+                  ref={rotationRef}
+                  style={{
+                    rotate: illustrationsRotate,
+                  }}
                 />
               </Circle>
             </div>
 
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute -top-[80px] -left-[605px] hidden md:inline-flex">
-                <img
+                <motion.img
                   src="/src/assets/illustrations/art.png"
                   alt="Art"
                   className="size-[150px]"
+                  ref={rotationRef}
+                  style={{
+                    rotate: illustrationsRotate,
+                  }}
                 />
               </Circle>
             </div>
 
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute top-[270px] left-[190px] hidden md:inline-flex">
-                <img
+                <motion.img
                   src="/src/assets/illustrations/clock.png"
                   alt="Clock"
                   className="size-[150px]"
+                  ref={rotationRef}
+                  style={{
+                    rotate: illustrationsRotate,
+                  }}
                 />
               </Circle>
             </div>
