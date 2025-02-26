@@ -4,11 +4,22 @@ import { Card } from "@/src/components/card";
 import { Tag } from "@/src/components/tag";
 import { getPostColorFromCategory } from "@/src/utils/post-utils";
 import { twMerge } from "tailwind-merge";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const RecentPosts = (props: {
   recentPosts: CollectionEntry<"articles">[];
 }) => {
   const { recentPosts } = props;
+
+  const targetRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "start center"],
+  });
+
+  const marginTop = useTransform(scrollYProgress, [0, 1], [0, 64]);
 
   return (
     <section className="py-8 md:py-16">
@@ -47,7 +58,13 @@ export const RecentPosts = (props: {
               ),
             )}
           </div>
-          <div className="mt-16 hidden flex-col gap-8 md:flex">
+          <motion.div
+            className="mt-16 hidden flex-col gap-8 md:flex"
+            ref={targetRef}
+            style={{
+              marginTop,
+            }}
+          >
             {recentPosts.map(
               ({ data: { title, description, category } }, postIndex) => (
                 <Card
@@ -71,7 +88,7 @@ export const RecentPosts = (props: {
                 </Card>
               ),
             )}
-          </div>
+          </motion.div>
         </div>
 
         <div className="mt-6 flex justify-center md:mt-12">
