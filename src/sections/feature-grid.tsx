@@ -1,3 +1,6 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 const listItems = [
   "Discover articulate examinations of key philosophical domains.",
   "Benefit from comprehensive explorations of diverse philosophical concepts.",
@@ -5,6 +8,26 @@ const listItems = [
 ];
 
 export const FeatureGrid = () => {
+  const globeRef = useRef(null);
+  const { scrollYProgress: globeScrollYProgress } = useScroll({
+    target: globeRef,
+    offset: ["start end", "end start"],
+  });
+  const globeTranslateY = useTransform(
+    globeScrollYProgress,
+    [0, 1],
+    [100, -100],
+  );
+  const globeRotate = useTransform(globeScrollYProgress, [0, 1], [20, -20]);
+
+  const bookRef = useRef(null);
+  const { scrollYProgress: bookScrollYProgress } = useScroll({
+    target: globeRef,
+    offset: ["start end", "end start"],
+  });
+  const bookTranslateY = useTransform(bookScrollYProgress, [0, 1], [100, -100]);
+  const bookRotate = useTransform(bookScrollYProgress, [0, 1], [-30, 20]);
+
   return (
     <section className="overflow-x-clip py-8 md:py-16">
       <div className="container mx-auto px-4">
@@ -50,10 +73,15 @@ export const FeatureGrid = () => {
             </div>
 
             <div className="hidden items-center justify-center md:flex">
-              <img
+              <motion.img
                 src="/src/assets/illustrations/globe.png"
                 alt="Globe"
                 className="size-100 max-w-none"
+                ref={globeRef}
+                style={{
+                  translateY: globeTranslateY,
+                  rotate: globeRotate,
+                }}
               />
             </div>
           </div>
@@ -61,10 +89,15 @@ export const FeatureGrid = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="relative hidden items-center justify-center md:flex">
               <div className="absolute right-0">
-                <img
+                <motion.img
                   src="/src/assets/illustrations/books.png"
                   alt="Books"
                   className="size-100 max-w-none"
+                  ref={bookRef}
+                  style={{
+                    translateY: bookTranslateY,
+                    rotate: bookRotate,
+                  }}
                 />
               </div>
             </div>
