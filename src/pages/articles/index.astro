@@ -1,0 +1,65 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/src/layouts/layout.astro";
+
+import { HeaderSection } from "@/src/sections/header"
+import { Hexagon } from "@/src/components/hexagon";
+
+const posts = (await getCollection("articles")).sort(
+  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+);
+
+const latestPosts = posts[0];
+---
+
+<Layout>
+  <HeaderSection client:load />
+  <section class="relative overflow-x-clip py-36 md:py-52">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <Hexagon size={1000} duration={30} client:load />
+    </div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <Hexagon size={1400} duration={50} reverse client:load />
+    </div>
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-3xl">
+        <p
+          class="text-center text-lg font-bold tracking-wider text-slate-600 uppercase"
+        >
+          Latest Posts
+        </p>
+        <h1
+          class="mx-auto mt-4 max-w-2xl text-center text-5xl font-extrabold text-slate-800 md:text-6xl"
+        >
+          {latestPosts.data.title}
+        </h1>
+        <p
+          class="mx-auto mt-6 max-w-xl text-center font-serif text-2xl text-slate-700 md:text-3xl"
+        >
+          {latestPosts.data.description}
+        </p>
+        <div class="mt-10 flex justify-center">
+          <a href={`/articles/${latestPosts.slug}`}>
+            <button
+              class="group relative cursor-pointer overflow-hidden px-4 py-2 font-semibold tracking-wide uppercase transition-all duration-300"
+            >
+              <div
+                class="absolute inset-0 outline-2 -outline-offset-2 outline-green-700 transition-all duration-300 group-hover:bg-green-700/10"
+              >
+              </div>
+              <div
+                class="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-green-700 transition-transform duration-300 ease-out group-hover:scale-x-100"
+              >
+              </div>
+              <span
+                class="relative z-10 leading-6 text-green-700 transition-colors duration-300 group-hover:text-white"
+              >
+                Read Now
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
