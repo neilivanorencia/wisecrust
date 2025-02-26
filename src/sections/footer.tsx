@@ -23,8 +23,8 @@ const footerNavLinks: {
     icon: FaHome,
   },
   {
-    title: "Blogs",
-    href: "/blogs",
+    title: "Articles",
+    href: "/articles",
     overview: "Explore our collection of essays.",
     icon: IoIosPaper,
   },

@@ -1,9 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "@/src/layouts/layout.astro";
+import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
-import { HeaderSection } from "@/src/sections/header"
+import { getPostColorFromCategory } from "@/src/utils/post-utils";
+import { Card } from "@/src/components/card";
 import { Hexagon } from "@/src/components/hexagon";
+import { Tag } from "@/src/components/tag";
 
 const posts = (await getCollection("articles")).sort(
   (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
@@ -13,12 +17,15 @@ const latestPosts = posts[0];
 ---
 
 <Layout>
-  <HeaderSection client:load />
-  <section class="relative overflow-x-clip py-36 md:py-52">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+  <section class="relative overflow-x-clip pt-36 pb-24 md:py-52">
+    <div
+      class="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block"
+    >
       <Hexagon size={1000} duration={30} client:load />
     </div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div
+      class="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block"
+    >
       <Hexagon size={1400} duration={50} reverse client:load />
     </div>
     <div class="container mx-auto px-4">
@@ -58,6 +65,84 @@ const latestPosts = posts[0];
               </span>
             </button>
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-24 pt-0 md:pt-52 md:pb-32">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8">
+        <div class="flex flex-col gap-y-8">
+          {
+            posts.map(
+              ({ data: { category, title, description }, slug }, index) => (
+                <motion.a
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeIn",
+                  }}
+                  href={`/articles/${slug}`}
+                  className={twMerge(index % 2 !== 0 && "md:hidden")}
+                  client:load
+                >
+                  <Card
+                    buttonText="Read More"
+                    color={getPostColorFromCategory(category)}
+                  >
+                    <Tag color={getPostColorFromCategory(category)}>
+                      {category}
+                    </Tag>
+                    <h2 class="mt-4 font-sans text-3xl font-extrabold text-slate-800">
+                      {title}
+                    </h2>
+                    <p class="mt-6 font-serif text-xl text-slate-800 md:text-2xl">
+                      {description}
+                    </p>
+                  </Card>
+                </motion.a>
+              )
+            )
+          }
+        </div>
+
+        <div class="hidden flex-col gap-y-12 md:mt-24 md:flex">
+          {
+            posts.map(
+              ({ data: { category, title, description }, slug }, index) => (
+                <motion.a
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeIn",
+                  }}
+                  href={`/articles/${slug}`}
+                  className={twMerge(index % 2 === 0 && "md:hidden")}
+                  client:load
+                >
+                  <Card
+                    buttonText="Read More"
+                    color={getPostColorFromCategory(category)}
+                  >
+                    <Tag color={getPostColorFromCategory(category)}>
+                      {category}
+                    </Tag>
+                    <h2 class="mt-4 font-sans text-3xl font-extrabold text-slate-800">
+                      {title}
+                    </h2>
+                    <p class="mt-6 font-serif text-xl text-slate-800 md:text-2xl">
+                      {description}
+                    </p>
+                  </Card>
+                </motion.a>
+              )
+            )
+          }
         </div>
       </div>
     </div>

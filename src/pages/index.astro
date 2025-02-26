@@ -1,13 +1,11 @@
 ---
 import Layout from "@/src/layouts/layout.astro";
-import { HeaderSection } from "@/src/sections/header";
 import { HeroSection } from "@/src/sections/hero";
 import { FeatureCards } from "@/src/sections/feature-cards";
 import { FeatureGrid } from "@/src/sections/feature-grid";
 import { RecentPosts } from "@/src/sections/recent-posts";
 import { ReflectionsSection } from "@/src/sections/reflections";
 import { CallToAction } from "@/src/sections/call-to-action";
-import { Footer } from "@/src/sections/footer";
 
 import { getCollection } from "astro:content";
 
@@ -26,7 +24,6 @@ const recentPosts = posts
 ---
 
 <Layout>
-  <HeaderSection client:load />
   <main class="pt-24 md:pt-28">
     <HeroSection client:load />
   </main>
@@ -35,5 +32,4 @@ const recentPosts = posts
   <RecentPosts recentPosts={recentPosts} client:load />
   <ReflectionsSection client:load />
   <CallToAction client:load />
-  <Footer />
 </Layout>
