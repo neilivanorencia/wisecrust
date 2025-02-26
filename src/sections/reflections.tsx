@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 const reflections = [
@@ -27,8 +28,24 @@ export const ReflectionsSection = () => {
       <div className="container mx-auto px-8 md:px-4">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
           {reflections.map((reflections, reflectionsIndex) => (
-            <blockquote
+            <motion.blockquote
               key={reflectionsIndex}
+              initial={{
+                opacity: 0,
+                y: 24,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                delay: reflectionsIndex * 0.5,
+                ease: "easeInOut",
+                duration: 1,
+              }}
               className={twMerge(
                 reflectionsIndex === 2 && "md:hidden lg:block",
               )}
@@ -56,7 +73,7 @@ export const ReflectionsSection = () => {
                   </div>
                 </div>
               </cite>
-            </blockquote>
+            </motion.blockquote>
           ))}
         </div>
       </div>
