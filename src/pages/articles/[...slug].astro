@@ -6,6 +6,8 @@ import { getPostColorFromCategory } from "@/src/utils/post-utils";
 import { Hexagon } from "@/src/components/hexagon";
 import { Tag } from "@/src/components/tag";
 
+import "@/src/styles/prose.css";
+
 export async function getStaticPaths() {
   const posts = await getCollection("articles");
   return posts.map((post) => ({
@@ -28,7 +30,7 @@ const { Content } = await post.render();
 ---
 
 <Layout>
-  <section class="pt-36 pb-24 md:py-52">
+  <section class="pt-36 pb-8 md:py-56">
     <div class="relative overflow-x-clip">
       <div
         class="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block"
@@ -47,12 +49,12 @@ const { Content } = await post.render();
             <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
           </div>
           <h1
-            class="mx-auto mt-4 max-w-2xl text-center text-5xl leading-14 font-extrabold text-slate-800 md:text-6xl"
+            class="mx-auto mt-4 max-w-2xl text-center text-4xl leading-10 font-extrabold text-slate-800 md:text-6xl md:leading-14"
           >
             {title}
           </h1>
           <p
-            class="mx-auto mt-6 max-w-xl text-center font-serif text-2xl text-slate-700 md:text-3xl"
+            class="mx-auto mt-6 max-w-xl text-center font-serif text-xl text-slate-700 md:text-3xl"
           >
             {description}
           </p>
@@ -74,6 +76,14 @@ const { Content } = await post.render();
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="pt-0 pb-24 md:py-32">
+    <div class="container mx-auto px-4">
+      <article class="prose-content mx-auto max-w-4xl">
+        <Content />
+      </article>
     </div>
   </section>
 </Layout>

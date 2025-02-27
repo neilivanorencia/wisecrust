@@ -1,0 +1,83 @@
+.prose-content {
+  font-family: "IM Fell DW Pica", Georgia, serif;
+  color: #334155;
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+
+.prose-content h1,
+.prose-content h2,
+.prose-content h3,
+.prose-content h4,
+.prose-content h5,
+.prose-content h6 {
+  font-family: "Avenir Next Cyrillic", system-ui, sans-serif;
+  color: #1e293b;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1;
+  font-weight: 800;
+}
+
+/* Scaled-down heading sizes for mobile */
+.prose-content h1 {
+  font-size: 2.25rem;
+}
+.prose-content h2 {
+  font-size: 1.75rem;
+}
+.prose-content h3 {
+  font-size: 1.5rem;
+}
+
+.prose-content p {
+  margin-bottom: 0.875em;
+}
+
+.prose-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.prose-content a {
+  color: #0ea5e9;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+.prose-content a:hover {
+  color: #0284c7;
+}
+
+.prose-content ul,
+.prose-content ol {
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+}
+.prose-content li {
+  margin-bottom: 0.5em;
+}
+
+.prose-content blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1em;
+  border-left: 4px solid #e2e8f0;
+  color: #475569;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .prose-content {
+    font-size: 1.375rem;
+  }
+
+  .prose-content h1 {
+    font-size: 2.5rem;
+  }
+  .prose-content h2 {
+    font-size: 2rem;
+  }
+  .prose-content h3 {
+    font-size: 1.875rem;
+  }
+}

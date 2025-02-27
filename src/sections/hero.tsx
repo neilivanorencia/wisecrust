@@ -22,7 +22,7 @@ export const HeroSection = () => {
   } as const;
 
   return (
-    <section className="overflow-x-clip py-36 md:py-52">
+    <section className="overflow-x-clip py-36 md:py-54">
       <div className="container mx-auto px-4">
         <div className="relative z-10">
           <p className="text-center text-lg font-bold tracking-wider text-slate-600 uppercase">
