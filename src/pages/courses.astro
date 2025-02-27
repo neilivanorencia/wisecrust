@@ -1,0 +1,114 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/src/layouts/layout.astro";
+import { motion } from "framer-motion";
+
+import { Card } from "@/src/components/card";
+import { Hexagon } from "@/src/components/hexagon";
+import { Tag } from "@/src/components/tag";
+
+import { getColorFromCourseType } from "@/src/utils/post-utils";
+import { getPostColorFromCategory } from "@/src/utils/post-utils";
+
+const courses = await getCollection("courses");
+---
+
+<Layout>
+  <section class="pt-36 pb-24 md:py-56">
+    <div class="relative overflow-x-clip">
+      <div
+        class="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block"
+      >
+        <Hexagon size={1000} duration={30} client:load />
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block"
+      >
+        <Hexagon size={1400} duration={50} reverse client:load />
+      </div>
+
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-3xl">
+          <p
+            class="text-center text-lg font-bold tracking-wider text-slate-600 uppercase"
+          >
+            Think with Greater Clarity
+          </p>
+          <h1
+            class="mx-auto mt-4 max-w-2xl text-center text-4xl leading-10 font-extrabold text-slate-800 md:text-6xl md:leading-14"
+          >
+            Uncover the Core of Wisdom
+          </h1>
+          <p
+            class="mx-auto mt-6 max-w-xl text-center font-serif text-xl text-slate-700 md:text-3xl"
+          >
+            Our courses will guide you through timeless questions, helping you
+            challenge assumptions and build a richer framework for
+            understanding.
+          </p>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+          <button
+            class="group relative cursor-pointer overflow-hidden px-4 py-2 font-semibold tracking-wide uppercase transition-all duration-300"
+          >
+            <div
+              class="absolute inset-0 outline-2 -outline-offset-2 outline-green-700 transition-all duration-300 group-hover:bg-green-700/10"
+            >
+            </div>
+            <div
+              class="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-green-700 transition-transform duration-300 ease-out group-hover:scale-x-100"
+            >
+            </div>
+            <span
+              class="relative z-10 leading-6 text-green-700 transition-colors duration-300 group-hover:text-white"
+            >
+              See Preview
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-0 pb-24 md:pt-52 md:pb-32">
+    <div class="container mx-auto flex flex-col gap-8">
+      <div class="flex flex-col gap-8 px-4 md:gap-12">
+        {
+          courses.map(({ data: { title, type, description, category } }) => (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeIn",
+              }}
+              client:load
+            >
+              <Card
+                buttonText="Enroll Now"
+                color={getPostColorFromCategory(category)}
+              >
+                <div class="flex flex-wrap items-center gap-3">
+                  {category && (
+                    <Tag color={getPostColorFromCategory(category)}>
+                      {category}
+                    </Tag>
+                  )}
+                  <Tag color={getColorFromCourseType(type)}>{type}</Tag>
+                </div>
+                <h2 class="mt-4 font-sans text-3xl font-extrabold text-slate-800">
+                  {title}
+                </h2>
+                <p class="mt-6 font-serif text-xl text-slate-800 md:text-2xl">
+                  {description}
+                </p>
+              </Card>
+            </motion.div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
