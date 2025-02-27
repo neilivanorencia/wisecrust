@@ -23,6 +23,9 @@ public/fonts/*
 # articles
 src/content/articles/*
 
+# courses
+src/content/courses/*
+
 # macOS-specific files
 .DS_Store
 

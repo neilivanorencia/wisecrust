@@ -16,3 +16,14 @@ export const getPostColorFromCategory = (category: string) => {
       return "none";
   }
 };
+
+export const getColorFromCourseType = (type: string) => {
+  switch (type) {
+    case "Foundation":
+      return "fuchsia";
+    case "Self-Paced":
+      return "pink";
+    default:
+      return "none"
+  }
+};
