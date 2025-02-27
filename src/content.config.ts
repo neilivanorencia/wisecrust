@@ -6,7 +6,7 @@ const articles = defineCollection({
     title: z.string(),
     description: z.string(),
     publishedDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
+    updatedDate: z.coerce.date().optional(),
     category: z.string(),
     philosopher: z.object({
       name: z.string(),
@@ -16,4 +16,16 @@ const articles = defineCollection({
   }),
 });
 
-export const collections = { articles };
+const courses = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishedDate: z.coerce.date(),
+    category: z.string(),
+    remote: z.boolean(),
+    type: z.string(),
+  }),
+});
+
+export const collections = { articles, courses };
