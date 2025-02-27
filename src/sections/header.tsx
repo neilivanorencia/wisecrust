@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Hexagon } from "@/src/components/hexagon";
 import { AnimatePresence, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
@@ -116,12 +115,6 @@ export const HeaderSection = () => {
             }}
           >
             <div className="absolute inset-2 mt-24 md:mt-28">
-              <div className="absolute top-1/2 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
-                <Hexagon size={1000} />
-              </div>
-              <div className="absolute top-1/2 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
-                <Hexagon size={1400} />
-              </div>
               <div className="flex h-full items-center justify-center">
                 <nav className="flex flex-col items-center gap-12 md:gap-16">
                   {navigationLinks.map(({ title, href }, index) => (

@@ -29,7 +29,7 @@ export const HeroSection = () => {
             Haven for Curious Minds
           </p>
 
-          <h1 className="mx-auto mt-4 max-w-2xl text-center text-5xl font-extrabold text-slate-800 md:text-6xl">
+          <h1 className="mx-auto mt-4 max-w-2xl text-center text-5xl leading-14 font-extrabold text-slate-800 md:text-6xl">
             Lighting Lamps in the Labyrinth of Life
           </h1>
 
