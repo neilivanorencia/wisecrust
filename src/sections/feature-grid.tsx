@@ -58,17 +58,23 @@ export const FeatureGrid = () => {
               </ul>
 
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center md:gap-8">
-                <button className="group relative inline-flex w-full cursor-pointer justify-center overflow-hidden px-4 py-2 font-semibold tracking-wide text-orange-500 uppercase transition-all duration-300 sm:w-auto">
+                <a
+                  href="/courses"
+                  className="group relative inline-flex w-full cursor-pointer justify-center overflow-hidden px-4 py-2 font-semibold tracking-wide text-orange-500 uppercase transition-all duration-300 sm:w-auto"
+                >
                   <div className="absolute inset-0 outline-2 -outline-offset-2 outline-orange-500 transition-all duration-300 group-hover:bg-orange-500/10"></div>
                   <div className="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-orange-500 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
                   <span className="relative z-10 text-center leading-6 transition-colors duration-300 group-hover:text-white">
                     Explore Concepts
                   </span>
-                </button>
-                <button className="group relative flex h-[38px] cursor-pointer items-center font-sans font-semibold tracking-wide text-orange-500 uppercase transition-all duration-300 hover:text-orange-600">
+                </a>
+                <a
+                  href="/contact"
+                  className="group relative flex h-[38px] cursor-pointer items-center font-sans font-semibold tracking-wide text-orange-500 uppercase transition-all duration-300 hover:text-orange-600"
+                >
                   Discover More
                   <span className="absolute -bottom-0 left-0 h-[2px] w-0 bg-orange-600 transition-all duration-300 group-hover:w-full"></span>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -122,17 +128,23 @@ export const FeatureGrid = () => {
               </div>
 
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-8">
-                <button className="group relative inline-flex w-full cursor-pointer justify-center overflow-hidden px-4 py-2 font-semibold tracking-wide text-green-600 uppercase transition-all duration-300 sm:w-auto">
+                <a
+                  href="/courses"
+                  className="group relative inline-flex w-full cursor-pointer justify-center overflow-hidden px-4 py-2 font-semibold tracking-wide text-green-600 uppercase transition-all duration-300 sm:w-auto"
+                >
                   <div className="absolute inset-0 outline-2 -outline-offset-2 outline-green-600 transition-all duration-300 group-hover:bg-green-600/10"></div>
                   <div className="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-green-600 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
                   <span className="relative z-10 text-center leading-6 transition-colors duration-300 group-hover:text-white">
                     Explore Concepts
                   </span>
-                </button>
-                <button className="group relative flex h-[38px] cursor-pointer items-center font-sans font-semibold tracking-wide text-green-600 uppercase transition-all duration-300 hover:text-green-500">
+                </a>
+                <a
+                  href="/contact"
+                  className="group relative flex h-[38px] cursor-pointer items-center font-sans font-semibold tracking-wide text-green-600 uppercase transition-all duration-300 hover:text-green-500"
+                >
                   Discover More
                   <span className="absolute -bottom-0 left-0 h-[2px] w-0 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

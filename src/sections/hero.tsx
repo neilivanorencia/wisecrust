@@ -38,13 +38,16 @@ export const HeroSection = () => {
           </p>
 
           <div className="mt-10 flex justify-center">
-            <button className="group relative cursor-pointer overflow-hidden px-4 py-2 font-semibold tracking-wide uppercase transition-all duration-300">
+            <a
+              href="/articles"
+              className="group relative cursor-pointer overflow-hidden px-4 py-2 font-semibold tracking-wide uppercase transition-all duration-300"
+            >
               <div className="absolute inset-0 outline-2 -outline-offset-2 outline-green-700 transition-all duration-300 group-hover:bg-green-700/10"></div>
               <div className="absolute inset-0 -z-10 origin-left scale-x-0 transform bg-green-700 transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
               <span className="relative z-10 leading-6 text-green-700 transition-colors duration-300 group-hover:text-white">
                 Explore Now
               </span>
-            </button>
+            </a>
           </div>
         </div>
 
