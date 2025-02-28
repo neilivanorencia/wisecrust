@@ -1,0 +1,6 @@
+# Allow all crawlers full access to the site.
+User-agent: *
+Allow: /
+
+# Point crawlers to sitemap.
+Sitemap: https://wisecrust.pages.dev/sitemap-index.xml

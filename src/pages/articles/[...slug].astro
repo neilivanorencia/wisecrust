@@ -41,7 +41,7 @@ const imageModule = allPhilosopherImages[imagePathKey];
 const philosopherImage = imageModule.default;
 ---
 
-<Layout>
+<Layout title={title} description={description} image={post.data.ogImage}>
   <section class="pt-36 pb-8 md:py-56">
     <div class="relative overflow-x-clip">
       <div

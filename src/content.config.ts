@@ -8,6 +8,7 @@ const articles = defineCollection({
     publishedDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     category: z.string(),
+    ogImage: z.string().optional(),
     philosopher: z.object({
       name: z.string(),
       title: z.string(),

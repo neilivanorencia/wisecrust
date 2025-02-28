@@ -21,9 +21,13 @@ const recentPosts = posts
     }
   })
   .slice(0, 6);
+
+const title = "Wisecrust — A Realm of Thought and Reflection";
+const description =
+  "Explore deep philosophical concepts, historical insights, and modern reflections. Join a community dedicated to wisdom and thoughtful discussion.";
 ---
 
-<Layout>
+<Layout {title} {description}>
   <main class="pt-24 md:pt-28">
     <HeroSection client:load />
   </main>
