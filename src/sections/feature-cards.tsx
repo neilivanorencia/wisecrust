@@ -109,7 +109,7 @@ export const FeatureCards = () => {
                 >
                   <div
                     className={twMerge(
-                      "absolute top-1.5 right-1.5 -z-10 size-16 rounded-xl opacity-0 blur-sm transition duration-300 group-hover:opacity-100",
+                      "absolute top-1.5 right-1.5 -z-10 size-14 rounded-xl opacity-0 blur-md transition duration-300 group-hover:opacity-45",
                       color === "slate" && "bg-slate-500",
                       color === "gray" && "bg-gray-500",
                       color === "zinc" && "bg-zinc-500",
@@ -175,11 +175,11 @@ export const FeatureCards = () => {
                     )}
                   />
 
-                  <div className="absolute inset-0 -z-10 rounded-2xl bg-green-300 [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]" />
+                  <div className="absolute inset-0 -z-10 rounded-3xl bg-green-300 [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]" />
 
                   <div className="-mt-28 flex justify-center">
                     <div className="relative inline-flex">
-                      <div className="absolute top-[calc(100%+16px)] h-4 w-full rounded-[100%] bg-green-500/70 transition duration-300 [mask-image:radial-gradient(closest-side,black,transparent)] group-hover:bg-green-500/30" />
+                      <div className="absolute top-[calc(100%+16px)] h-4 w-full rounded-[100%] bg-green-500/35 transition duration-300 [mask-image:radial-gradient(closest-side,black,transparent)] group-hover:bg-green-500/15" />
                       <img
                         src={image.src}
                         alt={title}

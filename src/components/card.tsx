@@ -13,7 +13,7 @@ export const Card = (
     <div className={twMerge("group relative z-0 p-8 sm:p-10", className)}>
       <div
         className={twMerge(
-          "absolute top-1.5 right-1.5 -z-10 size-16 rounded-xl opacity-0 blur-sm transition duration-300 group-hover:opacity-100",
+          "absolute top-1.5 right-1.5 -z-10 size-14 rounded-xl opacity-0 blur-md transition duration-300 group-hover:opacity-45",
           color === "slate" && "bg-slate-500",
           color === "gray" && "bg-gray-500",
           color === "zinc" && "bg-zinc-500",
@@ -67,7 +67,7 @@ export const Card = (
         )}
       />
 
-      <div className="absolute inset-0 -z-10 rounded-2xl bg-green-300 [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]" />
+      <div className="absolute inset-0 -z-10 rounded-3xl bg-green-300 [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]" />
 
       <div>{children}</div>
 

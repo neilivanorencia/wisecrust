@@ -50,8 +50,10 @@ export const HeaderSection = () => {
     <>
       <header
         className={`fixed top-0 right-0 left-0 z-50 bg-green-200 transition-shadow duration-300 ${
-          scrolled ? "shadow-md" : ""
-        }`}
+          scrolled 
+            ? "shadow-[0_10px_15px_-3px_rgba(0,68,27,0.07),0_4px_6px_-4px_rgba(0,68,27,0.07)]" 
+            : ""
+    }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex h-24 items-center justify-between md:h-28">
