@@ -49,3 +49,66 @@ Wisecrust is a conceptual website built to explore and demystify various philoso
 - **React** - A JavaScript library made by Facebook primarily used for building user interfaces for web applications.
 - **Tailwind CSS** - A utility-first CSS framework that allows for quick and flexible styling using predefined classes.
 - **Typescript** - A strongly typed programming language that builds on JavaScript by adding static types.
+
+## 📂 Project Structure
+
+<details>
+  <summary>See project structure here</summary>
+
+```plaintext
+└── 📁.vscode
+    ├── extensions.json
+    ├── launch.json
+    ├── settings.json
+└── 📁public
+    └── 📁fonts
+    ├── favicon.svg
+    ├── website-preview.png
+└── 📁src
+    └── 📁assets
+        └── 📁illustrations
+        └── 📁people
+        ├── card.tsx
+        ├── circle.tsx
+        ├── hexagon.tsx
+        ├── tag.tsx
+    └── 📁content
+        └── 📁articles
+        └── 📁courses
+    └── 📁layouts
+        ├── layout.astro
+    └── 📁pages
+        └── 📁articles
+            ├── [...slug].astro
+            ├── index.astro
+        ├── contact.astro
+        ├── courses.astro
+        ├── index.astro
+    └── 📁sections
+        ├── call-to-action.tsx
+        ├── feature-cards.tsx
+        ├── feature-grid.tsx
+        ├── footer.tsx
+        ├── header.tsx
+        ├── hero.tsx
+        ├── recent-posts.tsx
+        ├── reflections.tsx
+    └── 📁styles
+        ├── fonts.css
+        ├── global.css
+        ├── prose.css
+    └── 📁utils
+        ├── post-utils.ts
+    ├── content.config.ts
+├── .gitignore
+├── .prettierrc.mjs
+├── astro.config.mjs
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── README.md
+├── tailwind.config.mjs
+└── tsconfig.json
+```
+
+</details>
