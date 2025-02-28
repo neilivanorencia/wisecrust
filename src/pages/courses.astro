@@ -10,10 +10,13 @@ import { Tag } from "@/src/components/tag";
 import { getColorFromCourseType } from "@/src/utils/post-utils";
 import { getPostColorFromCategory } from "@/src/utils/post-utils";
 
+const title = "Courses";
+const description =
+  "Our courses will guide you through timeless questions, helping you challenge assumptions and build a richer framework for understanding.";
 const courses = await getCollection("courses");
 ---
 
-<Layout>
+<Layout {title} {description}>
   <section class="pt-36 pb-24 md:py-56">
     <div class="relative overflow-x-clip">
       <div

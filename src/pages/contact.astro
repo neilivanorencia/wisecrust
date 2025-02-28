@@ -1,10 +1,13 @@
 ---
 import Layout from "@/src/layouts/layout.astro";
-
 import { Hexagon } from "@/src/components/hexagon";
+
+const title = "Contact Us";
+const description =
+  "Have any questions or feedback? We'd love to hear from you. Reach out for course inquiries, suggestions, or just to say hello.";
 ---
 
-<Layout>
+<Layout {title} {description}>
   <section class="pt-36 pb-24 md:py-56">
     <div class="relative overflow-x-clip">
       <div
