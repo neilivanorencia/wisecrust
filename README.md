@@ -32,3 +32,13 @@
 <br />
 
 Wisecrust is a conceptual website built to explore and demystify various philosophical concepts through a highly interactive and visually-driven interface. It features a blog and a set of fictional course offerings, with content dynamically rendered from Markdown using Astro's content collections. It contains fluid animations and a unique, cohesive design language centered around geometric motifs and a dynamic color system.
+
+## ✨ Features
+
+- **Scroll-Driven Animations**: Implements scroll-driven animations to create parallax experience. Decorative illustrations and background elements subtly move and rotate as the user scrolls, adding depth to the layout.
+- **Auto-Playing Carousel**: Features a custom-built, auto-playing carousel. The animation is fully responsive and pauses on user hover for enhanced usability.
+- **Parallax Masonry Grid**: Displays recent articles in a two-column masonry layout with a parallax effect.
+- **Animated Navigation Menu**: Includes a fully responsive fixed header with a custom-animated hamburger icon. The menu opens into a full-screen overlay where navigation links appear with staggered animation.
+- **Dynamic Content Platform**: A dynamic content platform powers the site's articles and courses, which are managed through simple Markdown files.
+- **Categorical Color-Coding**: Implements a visual tagging system to distinguish between different philosophical concepts and course types.
+- **Responsive Design**: Optimized for various devices to ensure usability and aesthetic appeal on all screen sizes.
