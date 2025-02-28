@@ -4,6 +4,9 @@ import { useRef } from "react";
 import { Circle } from "@/src/components/circle";
 import { Hexagon } from "@/src/components/hexagon";
 
+import abcImage from "@/src/assets/illustrations/abc.png";
+import bagImage from "@/src/assets/illustrations/bag.png";
+
 export const CallToAction = () => {
   const sectionRef = useRef(null);
 
@@ -30,7 +33,8 @@ export const CallToAction = () => {
               className="absolute -top-[400px] left-5 size-[200px]"
             >
               <motion.img
-                src="src/assets/illustrations/abc.png"
+                src={abcImage.src}
+                alt="ABC blocks illustration"
                 className="size-[140px]"
                 style={{
                   rotate: illustrationsRotate,
@@ -44,7 +48,8 @@ export const CallToAction = () => {
               className="absolute -top-[70px] -left-[600px] size-[200px]"
             >
               <motion.img
-                src="src/assets/illustrations/bag.png"
+                src={bagImage.src}
+                alt="School bag illustration"
                 className="size-[140px]"
                 style={{
                   rotate: illustrationsRotate,

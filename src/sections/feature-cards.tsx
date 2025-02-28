@@ -2,37 +2,43 @@ import { useEffect, useState } from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { twMerge } from "tailwind-merge";
 
+import deskLampImage from "@/src/assets/illustrations/desk-lamp.png";
+import whiteboardImage from "@/src/assets/illustrations/whiteboard.png";
+import stationeryImage from "@/src/assets/illustrations/stationery.png";
+import diplomaImage from "@/src/assets/illustrations/diploma.png";
+import lockerImage from "@/src/assets/illustrations/locker.png";
+
 const cardData = [
   {
-    image: "/src/assets/illustrations/desk-lamp.png",
+    image: deskLampImage,
     title: "Existentialism",
     description:
       "Existentialism posits that existence precedes essence, meaning individuals are born into the world without pre-defined purpose or nature.",
     color: "emerald",
   },
   {
-    image: "/src/assets/illustrations/whiteboard.png",
+    image: whiteboardImage,
     title: "Nihilism",
     description:
       "Nihilism is a philosophical concept that fundamentally questions the existence of objective meaning, value, and truth. ",
     color: "blue",
   },
   {
-    image: "/src/assets/illustrations/stationery.png",
+    image: stationeryImage,
     title: "Idealism",
     description:
       "Idealism asserts that the nature of this world is fundamentally shaped by, or reducible to, mind, spirit, or consciousness.",
     color: "teal",
   },
   {
-    image: "/src/assets/illustrations/diploma.png",
+    image: diplomaImage,
     title: "Solipsism",
     description:
       "Solipsism is a philosophical proposition that posits the potential singularity of consciousness.",
     color: "sky",
   },
   {
-    image: "/src/assets/illustrations/locker.png",
+    image: lockerImage,
     title: "Memento Mori",
     description:
       "Memento mori, Latin for 'remember you must die,' serves as a potent reminder of the finite nature of human existence.",
@@ -175,7 +181,7 @@ export const FeatureCards = () => {
                     <div className="relative inline-flex">
                       <div className="absolute top-[calc(100%+16px)] h-4 w-full rounded-[100%] bg-green-500/70 transition duration-300 [mask-image:radial-gradient(closest-side,black,transparent)] group-hover:bg-green-500/30" />
                       <img
-                        src={image}
+                        src={image.src}
                         alt={title}
                         className="size-50 transition duration-300 group-hover:-translate-y-6"
                       />

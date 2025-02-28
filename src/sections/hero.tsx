@@ -4,6 +4,11 @@ import { useRef } from "react";
 import { Circle } from "@/src/components/circle";
 import { Hexagon } from "@/src/components/hexagon";
 
+import abacusImage from "@/src/assets/illustrations/abacus.png";
+import artImage from "@/src/assets/illustrations/art.png";
+import clockImage from "@/src/assets/illustrations/clock.png";
+import readingImage from "@/src/assets/illustrations/reading.png";
+
 export const HeroSection = () => {
   const rotationRef = useRef(null);
 
@@ -71,7 +76,7 @@ export const HeroSection = () => {
                 className="absolute top-[-825px] left-[275px] hidden md:inline-flex"
               >
                 <motion.img
-                  src="/src/assets/illustrations/abacus.png"
+                  src={abacusImage.src}
                   alt="Abacus"
                   className="size-[150px]"
                   ref={rotationRef}
@@ -85,7 +90,7 @@ export const HeroSection = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute -top-[80px] -left-[605px] hidden md:inline-flex">
                 <motion.img
-                  src="/src/assets/illustrations/art.png"
+                  src={artImage.src}
                   alt="Art"
                   className="size-[150px]"
                   ref={rotationRef}
@@ -102,7 +107,7 @@ export const HeroSection = () => {
                 className="absolute top-[270px] left-[190px] hidden md:inline-flex"
               >
                 <motion.img
-                  src="/src/assets/illustrations/clock.png"
+                  src={clockImage.src}
                   alt="Clock"
                   className="size-[150px]"
                   ref={rotationRef}
@@ -114,7 +119,7 @@ export const HeroSection = () => {
             </div>
 
             <motion.img
-              src="/src/assets/illustrations/reading.png"
+              src={readingImage.src}
               alt="Book"
               className="absolute top-1/2 left-1/2 h-auto w-auto max-w-[80%] -translate-x-1/2 -translate-y-1/2 object-contain"
               animate={{

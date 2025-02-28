@@ -1,6 +1,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+import globeImage from "@/src/assets/illustrations/globe.png";
+import booksImage from "@/src/assets/illustrations/books.png";
+
 const listItems = [
   "Discover articulate examinations of key philosophical domains.",
   "Benefit from comprehensive explorations of diverse philosophical concepts.",
@@ -80,7 +83,7 @@ export const FeatureGrid = () => {
 
             <div className="hidden items-center justify-center md:flex">
               <motion.img
-                src="/src/assets/illustrations/globe.png"
+                src={globeImage.src}
                 alt="Globe"
                 className="size-100 max-w-none"
                 ref={globeRef}
@@ -96,7 +99,7 @@ export const FeatureGrid = () => {
             <div className="relative hidden items-center justify-center md:flex">
               <div className="absolute right-0">
                 <motion.img
-                  src="/src/assets/illustrations/books.png"
+                  src={booksImage.src}
                   alt="Books"
                   className="size-100 max-w-none"
                   ref={bookRef}

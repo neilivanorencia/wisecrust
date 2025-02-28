@@ -1,24 +1,28 @@
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
+import joseOrtegaImage from "@/src/assets/people/jose-ortega-y-gasset.png";
+import georgeSantayamaImage from "@/src/assets/people/george-santayama.png";
+import johnDeweyImage from "@/src/assets/people/john-dewey.png";
+
 const reflections = [
   {
     text: "Life is a series of collisions with future; it is not the sum of what we've been, but what we yearn to be.",
     name: "José Ortega y Gasset",
     title: "Spanish philosopher",
-    avatar: "src/assets/people/jose-ortega-y-gasset.png",
+    avatar: joseOrtegaImage,
   },
   {
     text: "Everything in nature is lyrical in its own ideal essence, tragic in its own fate, and comic in its own existence.",
     name: "George Santayana",
     title: "Spanish-American philosopher",
-    avatar: "/src/assets/people/george-santayama.png",
+    avatar: georgeSantayamaImage,
   },
   {
     text: "The good man is the man who, no matter how morally unworthy he has been, is moving to become better.",
     name: "John Dewey",
     title: "American psychologist",
-    avatar: "src/assets/people/john-dewey.png",
+    avatar: johnDeweyImage,
   },
 ];
 
@@ -55,13 +59,12 @@ export const ReflectionsSection = () => {
               </p>
               <cite className="mt-8 block">
                 <div className="flex items-center gap-3">
-                  <div>
-                    <div
-                      className="size-16 rounded-lg bg-green-400 bg-cover shadow-lg"
-                      style={{
-                        backgroundImage: `url(${reflections.avatar})`,
-                      }}
-                    ></div>
+                  <div className="size-16 overflow-hidden rounded-lg shadow-lg">
+                    <img
+                      src={reflections.avatar.src}
+                      alt={reflections.name}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                   <div>
                     <p className="font-serif text-lg font-bold not-italic md:text-xl">
