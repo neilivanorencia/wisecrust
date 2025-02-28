@@ -15,7 +15,8 @@ const {
   image = "/website-preview.png",
 } = Astro.props;
 
-const formattedTitle = `${title} — Wisecrust`;
+const formattedTitle =
+  Astro.url.pathname === "/" ? title : `${title} — Wisecrust`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(image, Astro.site);
 ---
