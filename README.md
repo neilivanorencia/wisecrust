@@ -42,3 +42,10 @@ Wisecrust is a conceptual website built to explore and demystify various philoso
 - **Dynamic Content Platform**: A dynamic content platform powers the site's articles and courses, which are managed through simple Markdown files.
 - **Categorical Color-Coding**: Implements a visual tagging system to distinguish between different philosophical concepts and course types.
 - **Responsive Design**: Optimized for various devices to ensure usability and aesthetic appeal on all screen sizes.
+
+## 💻 Technology Stack
+
+- **Astro** - A JavaScript web framework optimized for building fast, content-driven websites.
+- **React** - A JavaScript library made by Facebook primarily used for building user interfaces for web applications.
+- **Tailwind CSS** - A utility-first CSS framework that allows for quick and flexible styling using predefined classes.
+- **Typescript** - A strongly typed programming language that builds on JavaScript by adding static types.
